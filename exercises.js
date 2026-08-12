@@ -25,7 +25,6 @@ function filterRangeInPlace(arr,a,b) {
     };
   };
 };
-
 const arrToFilter = [5, 3, 8, 1]
 filterRangeInPlace(arrToFilter,1,4);
 console.log(arrToFilter);
@@ -40,6 +39,13 @@ function decreasingOrder(arr) {
     if (a > b) return 1;
   })
   .reverse();
-}
-
+};
 console.log(decreasingOrder([1,2,3,4,5]));
+
+// copy and sort array
+
+const arr = ["HTML", "JavaScript", "CSS"]
+const sorted = arr.map(item => item).sort();
+console.log(arr);
+console.log(sorted);
+
