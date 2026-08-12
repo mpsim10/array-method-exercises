@@ -44,8 +44,22 @@ console.log(decreasingOrder([1,2,3,4,5]));
 
 // copy and sort array
 
-const arr = ["HTML", "JavaScript", "CSS"]
-const sorted = arr.map(item => item).sort();
-console.log(arr);
+const arrToSort = ["HTML", "JavaScript", "CSS"]
+const sorted = arrToSort.map(item => item).sort();
+console.log(arrToSort);
 console.log(sorted);
 
+// shuffle an array
+
+function shuffleArr(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let k = arr[i];
+    arr[i] = arr[j];
+    arr[j] = k;
+  };
+};
+
+const arrToShuffle = [1,2,3];
+shuffleArr(arrToShuffle);
+console.log(arrToShuffle);
