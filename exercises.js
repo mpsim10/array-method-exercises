@@ -63,3 +63,18 @@ function shuffleArr(arr) {
 const arrToShuffle = [1,2,3];
 shuffleArr(arrToShuffle);
 console.log(arrToShuffle);
+
+// filter unique array members
+
+function unique(arr) {
+  const unique = []
+  for (const val of arr) {
+    if (!unique.includes(val)) {
+      unique.push(val);
+    };
+  };
+  return unique;
+};
+
+const arrToMakeUnique = ["hare", "krishna", "hare", "krishna", "krishna", "krishna", "hare", "hare", ":-O"]
+console.log(unique(arrToMakeUnique));
