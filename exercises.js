@@ -78,3 +78,51 @@ function unique(arr) {
 
 const arrToMakeUnique = ["hare", "krishna", "hare", "krishna", "krishna", "krishna", "hare", "hare", ":-O"]
 console.log(unique(arrToMakeUnique));
+
+
+const john = {name: "john", surname: "smith", age: 25, id: 1};
+const pete = {name: "pete", surname: "hunt", age: 30, id: 2};
+const mary = {name: "mary", surname: "key", age: 28, id: 3};
+
+const users = [john, pete, mary]
+
+// map to names
+
+const namesMapped = users.map(user => user.name);
+console.log(namesMapped);
+
+// map to objects
+
+const usersMapped = users.map(user => ({
+  fullName: `${user.name} ${user.surname}`,
+  id: user.id
+}));
+
+console.log(usersMapped)
+
+// sort users by age
+
+function sortByAge(arr) {
+  return arr.sort((a, b) => a.age - b.age);
+};
+
+const ageSorted = sortByAge(users);
+console.log(ageSorted);
+
+// get average age
+
+function getAverageAge(arr) {
+  const ages = arr.map(user => user.age);
+  return Math.round(ages.reduce((a,b) => a + b) / arr.length);
+};
+
+console.log(getAverageAge(users));
+
+// create keyed object from array
+
+function groupById(arr) {
+  return array.reduce((obj, value) => {
+    obj[value.id] = value;
+    return obj;
+  }, {})
+};
